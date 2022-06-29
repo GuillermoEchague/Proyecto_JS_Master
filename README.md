@@ -68,3 +68,43 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+URL: https://maf2qxs1f6.execute-api.us-east-1.amazonaws.com/prod/oauth/token
+METHOD: POST
+BODY: (ejemplo de la estructura, debe reemplazar los valores por los solicitados)
+
+{
+ "client_id": clientId,
+ "client_secret": clientSecret,
+ "audience": audience,
+ "grant_type": grantType
+}
+
+Esta API en particular sólo recibe llamados para Grant Type del tipo client_credentials.
+
+Los usuarios registrados en esta API tienen los siguientes nombres de usuario y contraseña:
+
+usuario: adalovelace
+password:  1234d4
+
+usuario: dualipa 
+password: du4321
+
+Deben ser usados como client_id y client_secret respectivamente.
+
+Para ambos usuarios la audiencia es https://escalab.academy
+
+
+
+Usuarios de Prueba
+Administrador
+Usuario: madonna
+Contraseña: mad0nna
+
+Usuarios
+Usuario: dualipa
+Contraseña: du4321
+
+Usuario: britney
+Contraseña: britNEY

@@ -1,0 +1,68 @@
+.login-form {
+  background-color: #ebf0e4;
+}
+
+.login-form__input {
+  width: 800px;
+  height: 36px;
+  background-color: #ebf0e4;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 140%;
+  /* or 34px */
+
+  letter-spacing: 0.02em;
+
+  /* 000000 */
+
+  color: #000000;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.login-form__button {
+  background-color: #5e6600;
+  height: 88px;
+  width: 946px;
+  /* Heading 5 */
+
+  font-family: "Rufina";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+  /* identical to box height, or 150% */
+
+  /* FFFFFF */
+
+  color: #ffffff;
+}
+
+.login-form__title {
+  /* Heading 1 */
+
+  font-family: "Rufina";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 108px;
+  line-height: 120px;
+  /* identical to box height, or 111% */
+
+  /* 000000 */
+
+  color: #000000;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
