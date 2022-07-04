@@ -1,14 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { base_url } from "../../constants/constantes";
+import React, { useState, useEffect, Fragment } from "react";
+import { base_url, ACCESS_TOKEN } from "../../constants/constantes";
+import Order from "../Order/Order";
 
 const Orders = () => {
   const [orders, setOrders] = useState(null);
-
-  const token =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJuYW1lIjoiTWFkb25uYSIsInVzZXIiOiJtYWRvbm5hIiwicm9sZXMiOlsiYWRtaW4iXX0.5l4DWWWWhxarAzv9NIiUfoFYiSe6QpmjT2B1SkQjpV4";
-  // const result = await userApi(token);
-  // console.log(result);
-  // setUser(result)
+  const token = localStorage.getItem(ACCESS_TOKEN);
   const params = {
     method: "GET",
     headers: {
@@ -23,12 +19,21 @@ const Orders = () => {
     fetch(`${base_url}/api/orders`, params)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data[0].waiter);
+        console.log(data);
         setOrders(data);
       });
   }, []);
 
-  return <div>{orders ? <h1>Orders</h1> : null}</div>;
+  return (
+    <div>
+      {orders ? (
+        <Fragment>
+          <h1>Orders</h1>
+          <Order items={orders} />
+        </Fragment>
+      ) : null}
+    </div>
+  );
 };
 
 export default Orders;

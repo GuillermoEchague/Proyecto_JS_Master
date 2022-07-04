@@ -9,7 +9,12 @@ const SigIn = () => {
   return (
     <>
       <Navbar />
-      <HeroSection backgroundImage={background} text={"Iniciar Sesión"} />
+      <HeroSection
+        backgroundImage={background}
+        text={"Iniciar Sesión"}
+        link={"/"}
+        buttonName={"Menú"}
+      />
       <LoginForm />
     </>
   );

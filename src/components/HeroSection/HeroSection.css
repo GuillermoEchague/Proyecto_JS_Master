@@ -27,9 +27,14 @@
   }
   
   .hero-btns {
-    margin-top: 32px;
+    margin-top: 10px;
+    color: #fff;
+    font-size: 32px;
   }
-  
+  .text-h1{
+    color: #fff;
+    font-size: 32px;
+  }
   .hero-btns .btn {
     margin: 6px;
   }

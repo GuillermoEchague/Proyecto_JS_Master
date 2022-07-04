@@ -1,30 +1,22 @@
-import React from 'react';
-import '../../App.css';
-// import { Button } from './Button';
-import './HeroSection.css';
+import React from "react";
+import "../../App.css";
+import { Link } from "react-router-dom";
+import "./HeroSection.css";
 
 function HeroSection(props) {
   return (
-    <div className='hero-container' style={{ 
-        backgroundImage: `url(${props.backgroundImage})` 
-      }}>
+    <div
+      className="hero-container"
+      style={{
+        backgroundImage: `url(${props.backgroundImage})`,
+      }}
+    >
       <h1>{props.text}</h1>
-      <div className='hero-btns'>
-        {/* <Button
-          className='btns'
-          buttonStyle='btn--outline'
-          buttonSize='btn--large'
-        >
-          GET STARTED
-        </Button>
-        <Button
-          className='btns'
-          buttonStyle='btn--primary'
-          buttonSize='btn--large'
-          onClick={console.log('hey')}
-        >
-          WATCH TRAILER <i className='far fa-play-circle' />
-        </Button> */}
+
+      <div className="hero-btns">
+        <Link to={props.link}>
+          <button><h1 className="text-h1">{props.buttonName}</h1></button>
+        </Link>
       </div>
     </div>
   );

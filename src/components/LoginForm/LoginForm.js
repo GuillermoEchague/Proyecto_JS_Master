@@ -8,8 +8,8 @@ import "react-toastify/dist/ReactToastify.css";
 
 export default function LoginForm() {
   const [inputs, setInputs] = useState({
-    name: "",
-    password: "",
+    name: "madonna",
+    password: "mad0nna",
   });
 
   const [errorLogin, setErrorLogin] = useState(0);
@@ -25,27 +25,23 @@ export default function LoginForm() {
     e.preventDefault();
 
     const result = await signInApi(inputs);
-    console.log(result);
+
     if (result.error) {
       const notify1 = () => toast(result.error_description);
       notify1();
       setErrorLogin(errorLogin + 1);
-      // console.log(errorLogin)
     } else {
       setErrorLogin(0);
-      // console.log(errorLogin)
-      const { accessToken, refreshToken } = result;
-      localStorage.setItem(ACCESS_TOKEN, accessToken);
-      localStorage.setItem(REFRESH_TOKEN, refreshToken);
+      const { access_token, refresh_token } = result;
+      localStorage.setItem(ACCESS_TOKEN, access_token);
+      localStorage.setItem(REFRESH_TOKEN, refresh_token);
       const notify = () => toast("Login Correcto.!");
       notify();
 
       setTimeout(() => {
-        console.log("1 Segundo esperado");
         window.location.href = "/delivery";
-      }, 2000);
+      }, 1000);
     }
-    console.log(result);
   };
 
   return (
