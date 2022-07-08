@@ -40,6 +40,8 @@ const CafeGrid = () => {
     }
   };
 
+  
+
   return (
     <div className="App">
       {foods ? (

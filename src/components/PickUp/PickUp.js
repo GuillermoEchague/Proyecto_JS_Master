@@ -2,7 +2,7 @@ import React from 'react'
 
 const PickUp = () => {
   return (
-    <div>PickUp</div>
+    <h1>PickUp</h1>
   )
 }
 
