@@ -4,11 +4,11 @@ import HeroSection from "../components/HeroSection/HerosSection";
 // import Login from '../components/Login/Login';
 import LoginForm from "../components/LoginForm/LoginForm";
 
-import Navbar from "../components/Navbar/Navbar";
+// import Navbar from "../components/Navbar/Navbar";
 const SigIn = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <HeroSection
         backgroundImage={background}
         text={"Iniciar Sesión"}
