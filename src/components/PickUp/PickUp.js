@@ -126,7 +126,7 @@ const PickUp = () => {
         <div>
           <label>Producto</label>
           <select {...register("product")}>
-            {/* {platos.map((element) => {
+            {platos.map((element) => {
               if (element.id) {
                 return (
                   <>
@@ -135,7 +135,7 @@ const PickUp = () => {
                 );
               }
               return true;
-            })} */}
+            })}
           </select>
         </div>
         <div>
