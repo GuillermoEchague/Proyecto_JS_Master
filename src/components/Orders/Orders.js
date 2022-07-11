@@ -1,24 +1,12 @@
 import React, { useState, useEffect, Fragment } from "react";
 import { base_url, ACCESS_TOKEN } from "../../constants/constantes";
 import Order from "../Order/Order";
-import PickUp from "../PickUp/PickUp"
-
 
 const Orders = () => {
-
   const [platos, setPlatos] = useState(null);
- 
-
-  useEffect(() => {
-    fetch(`${base_url}/api/menus`)
-      .then((res) => res.json())
-      .then((data) => {
-        setPlatos(data);
-      });
-  }, []);
-
-
   const [orders, setOrders] = useState(null);
+  const [users, setUsers] = useState(null);
+
   const token = localStorage.getItem(ACCESS_TOKEN);
   const params = {
     method: "GET",
@@ -31,20 +19,31 @@ const Orders = () => {
   };
 
   useEffect(() => {
+    fetch(`${base_url}/api/users`, params)
+      .then((res) => res.json())
+      .then((data) => {
+        setUsers(data);
+      });
+
     fetch(`${base_url}/api/orders`, params)
       .then((res) => res.json())
       .then((data) => {
         setOrders(data);
       });
-  }, []);
 
+    fetch(`${base_url}/api/menus`)
+      .then((res) => res.json())
+      .then((data) => {
+        setPlatos(data);
+      });
+  }, []);
 
   return (
     <div>
       {orders ? (
         <Fragment>
           <h1>Orders</h1>
-          <Order items={orders} product={platos}/>
+          <Order items={orders} product={platos} users={users} />
         </Fragment>
       ) : null}
     </div>

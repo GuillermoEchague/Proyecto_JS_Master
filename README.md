@@ -1,3 +1,7 @@
+# Desarrollo Actividad JS Master
+
+Nombre: Guillermo Echagüe
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -108,3 +112,18 @@ Contraseña: du4321
 
 Usuario: britney
 Contraseña: britNEY
+
+
+### Home 
+![](assets/images/1.png)
+
+### Login
+![](assets/images/2.png)
+
+### Pedidos
+![](assets/images/3.png)
+
+### Usuario
+![](assets/images/4.png)
+
+
