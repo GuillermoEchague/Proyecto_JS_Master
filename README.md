@@ -121,9 +121,9 @@ Contraseña: britNEY
 ![](src/assets/images/2.png)
 
 ### Pedidos
-![](src/assets/images/3.png)
+![](src/assets/images/4.png)
 
 ### Usuario
-![](src/assets/images/4.png)
+![](src/assets/images/3.png)
 
 
